@@ -12,7 +12,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
-    
+
   <title>HANGMAN</title>
   
   </head>
@@ -33,10 +33,27 @@
             answer photo placeholder  
             </div> 
     
-            <div class="col-sm">
-              22222
+            <div class="col-sm">     
+              <div class="press">  
+                <h3>Press any key to get started!</h3>
+                <br>
+                <h4 class="blanks">
+                </h4>
+                
+                <div class= "wins">
+                </div>
+                
+                <div class="loss">
+                </div>
+                
+                <div>
+                  <p class="currentword">
+                  </p>
+                  <p class="right">
+                </div>
+              </div>
             </div>
-        
+        </div>
         <div class="row">
           
           <div class="col-sm">
@@ -44,7 +61,22 @@
           </div>
           
           <div class="col-sm">
-            four four four fourfour fourfour fourfour fourfour fourfour fourfour fourfour fourfour fourfour fourfour fourfour four
+            <div class="guess">
+
+                <h3>Number of Guesses Remaining</h3>
+                <div class="remainingGuesses">
+                </div>
+                <br>
+                <br>
+                <h4>Letters Already Guessed</h4>
+                <br>
+                <br>
+                <div class="letters">
+
+                </div>
+                <br>
+                <br>
+            </div>
           </div>
 
         </div>
@@ -52,7 +84,11 @@
       </div>
 
     </div>
-  
+  <footer style="background-color:lightgray;border-top:2px solid #4ffff5;color:whitesmoke;padding-top:15px;width:100%;text-align:center;height:50px">
+      (C)Copyright 2016 Monir Cederstrom
+  </footer>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>
   </body>
 
+    
 </html>
