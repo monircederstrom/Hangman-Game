@@ -8,7 +8,7 @@ var computerWord = wordBank [wordIndex];
 var blanks = []; 
 var correctWord= [];
 var guessedLetters = [];
-var goodLetters = []
+var newGuessedLetters = []
 var wins = 0;
 var losses = 0;
 console.log(computerWord);
@@ -16,8 +16,9 @@ console.log(computerWord);
 //Pushing to HTML
 var docBlanks = document.getElementsByClassName('blanks');
 var docGuessedLetters = document.getElementsByClassName('letters');
-var docGoodLetters = document.getElementsByClassName('right');
+
 var docWins = document.getElementsByClassName('wins');
+var docCorrectWord = document.getElementsByClassName('currentword');
 // create array of letters guessed 
 	// if = -1 then not guesed 
 
@@ -36,24 +37,42 @@ docBlanks[0].innerHTML = blanks.join('');
 
 // event listener for letter that is pressed (on key up function)
 document.onkeyup = function(event) {
-	var letter = String.fromCharCode(event.keyCode).toLowerCase();
-//link with key press down store what is guessed in variable
+	var letter = String.fromCharCode(event.keyCode).toLowerCase();		
+
+//check if its been guessed before
+for (var i = 0; i < guessedLetters.length; i++)
+	if (guessedLetters.indexOf('letter') = -1);
+		{
 		guessedLetters.push(letter);
 		docGuessedLetters[0].innerHTML = guessedLetters.join('');
 	console.log(guessedLetters);
+		}
 
-//check if its been guessed before
-		if(string.indexOf(guessedLetter, computerWord) > -1);
+	
+//checks to see if letter is in computerWord -1=not in word	
+	//if(computerWord.indexOf(letter) > -(1)
 
-				console.log(working);
-			}
+		for (var i = 0; i < computerWord.length; i++)
+		{
+			if (computerWord[i] === guessedLetters)
+			{
+				correctWord.push(guessedLetters);
+				docCorrectWord[0].innerHTML = correctWord.join(' ');
+				console.log(correctWord);
+			}	
+		}
+		document.getElementsByClassName("currentWord").innerHTML = correctWord.join(" ");
+	};
+
+
+			
+			
 		
 	
 
 
 
-//checks to see if letter is in computerWord -1=not in word	
-	//if(computerWord.indexOf(letter) > -(1)
+
 
 // if guess is in word display letter ( array) 
 		//goodLetters.push(letter);
